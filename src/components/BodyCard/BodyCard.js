@@ -16,7 +16,25 @@ const BodyCard = () => {
 
     const isUrl = useSelector(state => state.myReducer.isUrl);
 
+
+
     useEffect(() => {
+
+        const addTodo = async () => {
+            try {
+                const response = await axios.get(`${isUrl}`, {
+                    headers: {
+                        Authorization: `Bearer ${tokenGit}`
+                    }
+                });
+                if (response) {
+                    console.log(response.data)
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        };
+
         if (isUrl) {
             addTodo(isUrl)
         }
@@ -50,21 +68,6 @@ const BodyCard = () => {
         droppedCell.cards.splice(droppedIndex, 0, draggedCardItem);
         setCardList(newCardList);
         e.target.style.background = 'white';
-    };
-
-    const addTodo = async () => {
-        try {
-            const response = await axios.get(`${isUrl}`, {
-                headers: {
-                    Authorization: `Bearer ${tokenGit}`
-                }
-            });
-            if (response) {
-                console.log(response.data)
-            }
-        } catch (error) {
-            console.log(error)
-        }
     };
 
     return (
