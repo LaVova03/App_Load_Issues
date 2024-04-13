@@ -1,0 +1,13 @@
+.main__wrap {
+  display: block;
+  width: max-content;
+  padding: 0 50px;
+  height: 100vh;
+  background-color: white;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.main__wrap > div {
+  display: flex;
+}

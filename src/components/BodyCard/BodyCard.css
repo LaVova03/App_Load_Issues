@@ -1,0 +1,35 @@
+.body_card_wrap {
+  display: flex;
+  padding: 0 20px;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+}
+.empty-card {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 300px;
+  height: 500px;
+  padding: 20px;
+}
+
+.body_wrap,
+.body_card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  border-radius: 12xp;
+  border: 1px solid gray;
+  cursor: grab;
+  margin: 20px auto;
+}
+
+.body_wrap {
+  display: block;
+  margin: 20px;
+  height: 400px;
+}
